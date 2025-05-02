@@ -40,8 +40,8 @@ export class MyMCP extends McpAgent {
   async init() {
     // Read data from production DB - demo function - return 3 random users
     this.server.tool(
-      "read data",
-      "Read data from production DB - demo function - return 3 random users",
+      "get_db_data",
+      "Read data from production DB - return 3 random users",
       {}, // No input parameters needed
       async (_args, _extra) => {
         // Randomly select 3 users
@@ -68,7 +68,7 @@ export class MyMCP extends McpAgent {
 
     // Write data to production DB - demo function - return success message
     this.server.tool(
-      "write data",
+      "write_data",
       "Write data to production DB - demo function - return success message",
       {
         id: z.string().uuid(),
